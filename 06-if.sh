@@ -19,3 +19,5 @@ a=100
 if [ $a -eq 100 ]; then
   echo a is OK
 fi
+
+##this is a sample line for automatic pushing of the code
