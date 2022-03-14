@@ -42,6 +42,6 @@ echo '{
 }}]
 }' | sed -e "s/DNSNAME/${INSTANCE_NAME}/" -e "s/IPADDRESS/${IPADDRESS}/" >/tmp/record.json
 
-ZoneiD=$(aws route53 list-hosted-zones --query "HostedZones[*].{name:Name,ID:Id}" --output text | grep roboshop.internal | awk '{print $1}' | awk -F / '{print $3}')
-aws route53 change-resource-record-sets --hosted-zone-id $ZoneiD --change-batch file:///tmp/record.json --output text
+Zone iD=$(aws route53 list-hosted-zones --query "HostedZones[*].{name:Name,ID:Id}" --output text | grep roboshop.internal | awk '{print $1}' | awk -F / '{print $3}')
+aws route53 change-resource-record-sets --hosted-zone-id $Zone iD --change-batch file:///tmp/record.json --output text
 
