@@ -41,4 +41,5 @@ echo '{
                                    "ResourceRecords": [{ "Value": "IPADDRESS"}]
 }}]
 }' | sed -e "s/DNSNAME/${INSTANCE_NAME}/" -e "s/IPADDRESS/${IPADDRESS}/" >/tmp/record.json
+aws route53 change-resource-record-sets --hosted-zone-id --change-batch file://sample.json
 
