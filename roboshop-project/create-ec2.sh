@@ -9,4 +9,4 @@ else
 fi
 
 
-aws ec2 run-instances --image-id ${AMI_ID} --instance-type t3.micro
+aws ec2 run-instances --image-id ${AMI_ID} --instance-type t3.micro --output text
