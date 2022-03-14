@@ -33,7 +33,7 @@ sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/'
  /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
 
 echo "Setup Catalogue SystemD file"
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service &>>$LOG_FILE
+mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service &>>$LOG_FILE
 
 echo "Start Catalogue"
 systemctl daemon-reload &>>$LOG_FILE
