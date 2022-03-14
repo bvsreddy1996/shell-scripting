@@ -40,7 +40,7 @@ echo '{
                                       "TTL": 300,
                                    "ResourceRecords": [{ "Value": "IPADDRESS"}]
 }}]
-}' | sed -e "s/DNSNAME/${INSTANCE_NAME}/" -e "s/IPADDRESS/${IPADDRESS}/" >/tmp/record.json
+}' | sed -e "s/DNSNAME/${INSTANCE_NAME}.internal/" -e "s/IPADDRESS/${IPADDRESS}/" >/tmp/record.json
 ZONE_ID=$(aws route53 list-hosted-zones --query "HostedZones[*].{name:Name,ID:Id}" --output text | grep roboshop.internal  | awk '{print $1}' | awk -F / '{print $3}')
 aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch file:///tmp/record.json --output text
 
