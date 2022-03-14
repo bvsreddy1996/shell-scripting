@@ -28,4 +28,7 @@ npm install &>>$LOG_FILE
 
 chown roboshop:roboshop /home/roboshop/ -R
 
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/'
+
+
 
