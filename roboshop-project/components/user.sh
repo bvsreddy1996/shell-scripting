@@ -1,1 +1,3 @@
-echo Installing User
+source components/common.sh
+
+NODEJS user

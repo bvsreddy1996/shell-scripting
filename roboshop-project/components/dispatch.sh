@@ -1,1 +1,3 @@
-echo Installing Dispatch
+source components/common.sh
+
+GOLANG dispatch

@@ -1,1 +1,3 @@
-echo Installing Shipping
+source components/common.sh
+
+JAVA shipping
